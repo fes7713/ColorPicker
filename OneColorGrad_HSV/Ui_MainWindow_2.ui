@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>785</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_6">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="hueLabel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Hue</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="hueSpinBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="maximum">
+             <number>360</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QSlider" name="hueSlider">
+          <property name="maximum">
+           <number>360</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="satLabel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Saturation</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="satSpinBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="maximum">
+             <number>255</number>
+            </property>
+            <property name="value">
+             <number>255</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QSlider" name="satSlider">
+          <property name="maximum">
+           <number>255</number>
+          </property>
+          <property name="value">
+           <number>255</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLabel" name="valueValue">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Value</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="valueSpinBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="maximum">
+             <number>255</number>
+            </property>
+            <property name="value">
+             <number>255</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QSlider" name="valueSlider">
+          <property name="maximum">
+           <number>255</number>
+          </property>
+          <property name="value">
+           <number>255</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="nStepsLabel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Steps</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="stepSpinBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>200</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QSlider" name="nStepsSlider">
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>50</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QFrame" name="frame">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QGridLayout" name="gridLayout">
+             <property name="horizontalSpacing">
+              <number>11</number>
+             </property>
+             <property name="verticalSpacing">
+              <number>7</number>
+             </property>
+             <item row="9" column="2">
+              <widget class="QPushButton" name="prese_color_20">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Apricot</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 216, 177);
+color: rgb(255, 216, 177);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#ffd8b1</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QPushButton" name="prese_color_8">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Red</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(230, 25, 75);
+color: rgb(230, 25, 75);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1px;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#e6194B</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="5">
+              <widget class="QPushButton" name="prese_color_16">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Purple</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(145, 30, 180);
+color: rgb(145, 30, 180);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#911eb4</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="2">
+              <widget class="QPushButton" name="prese_color_7">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Orange</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(245, 130, 49);
+color: rgb(245, 130, 49);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1px;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#f58231</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="8">
+              <widget class="QPushButton" name="prese_color_17">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Violet</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(193, 64, 244);
+color: rgb(193, 64, 244);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#c140f4</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="0">
+              <widget class="QPushButton" name="prese_color_19">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Pink</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(250, 190, 212);
+color: rgb(250, 190, 212);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#fabed4</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="9">
+              <widget class="QPushButton" name="prese_color_6">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Black</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(0, 0, 0);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#000000</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="9">
+              <widget class="QPushButton" name="prese_color_18">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Magenta</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color:rgb(240, 50, 230);
+color: rgb(240, 50, 230);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#f032e6</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="2">
+              <widget class="QPushButton" name="prese_color_14">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Cerulean</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(66, 212, 244);
+color: rgb(66, 212, 244);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1px;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#42d4f4</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="8">
+              <widget class="QPushButton" name="prese_color_11">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Green</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(60, 180, 75);
+color: rgb(60, 180, 75);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1px;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#3cb44b</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="4">
+              <widget class="QPushButton" name="prese_color_10">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Yellow</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 225, 25);
+color: rgb(255, 225, 25);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1px;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#ffe119</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="5">
+              <widget class="QPushButton" name="prese_color_9">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Lime</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(191, 239, 69);
+color: rgb(191, 239, 69);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1px;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#bfef45</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="9">
+              <widget class="QPushButton" name="prese_color_12">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Turtle Green</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color:rgb(35, 120, 82);
+color: rgb(35, 120, 82);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1px;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#237852</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="9">
+              <widget class="QPushButton" name="pushButton_4">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>White</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(255, 255, 255);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1px;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#ffffff</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="4">
+              <widget class="QPushButton" name="pushButton">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Beige</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 250, 200);
+color: rgb(255, 250, 200);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1px;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#fffac8</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="5">
+              <widget class="QPushButton" name="pushButton_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Mint</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(170, 255, 195);
+color: rgb(170, 255, 195);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1px;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#aaffc3</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="8">
+              <widget class="QPushButton" name="pushButton_3">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Lavender</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(220, 190, 255);
+color: rgb(220, 190, 255);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1px;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#dcbeff</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QPushButton" name="prese_color_13">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Cyan</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(0, 255, 255);
+color: rgb(0, 255, 255);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#00ffff</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="4">
+              <widget class="QPushButton" name="prese_color_3">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Olive</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(128, 128, 0);
+color: rgb(128, 128, 0);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#808000</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="5">
+              <widget class="QPushButton" name="prese_color_4">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Teal</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(70, 153, 144);
+color: rgb(70, 153, 144);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#469990</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="2">
+              <widget class="QPushButton" name="prese_color_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Brown</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(154, 99, 36);
+color:rgb(154, 99, 36);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1;
+border-radius:10px;
+</string>
+               </property>
+               <property name="text">
+                <string>#9A6324</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="8">
+              <widget class="QPushButton" name="prese_color_5">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Navy</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(0, 0, 117);
+color: rgb(0, 0, 117);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#000075</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QPushButton" name="prese_color_1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Maroon</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(128, 0, 0);
+color: rgb(128, 0, 0);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#800000</string>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="4">
+              <widget class="QPushButton" name="prese_color_15">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Blue</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(67, 99, 216);
+color: rgb(67, 99, 216);
+border-color: rgb(67, 67, 67);
+border-style: solid;
+border-width:1px;
+border-radius:10px;</string>
+               </property>
+               <property name="text">
+                <string>#4363d8</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
